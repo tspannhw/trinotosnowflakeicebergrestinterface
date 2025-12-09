@@ -76,7 +76,7 @@ Note:  use lowercase for name, don't use underscores (_)
 Note:   rest-catalog warehouse is database name with Permissions for the TRINO_ROLE
 
 
-`````
+````
 
 CREATE CATALOG horizonsnow USING iceberg
 WITH (
