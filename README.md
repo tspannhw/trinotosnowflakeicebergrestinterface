@@ -261,5 +261,6 @@ Make sure you have network and login permissions.
 <img width="2145" height="1209" alt="image" src="https://github.com/user-attachments/assets/a496bc18-251e-4798-8867-5131d361eac2" />
 
 
-<img width="2577" height="1826" alt="image" src="https://github.com/user-attachments/assets/461b1e42-ea40-4e8d-ade0-190bcb50b302" />
+<img width="2577" height="1826" alt="fix" src="https://github.com/user-attachments/assets/4b6c129d-0b51-4c75-be07-72570edd34f7" />
+
 
