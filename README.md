@@ -103,8 +103,6 @@ Query 20251209_011321_00005_q7bzc, FINISHED, 1 node
 Splits: 11 total, 11 done (100.00%)
 3.47 [4 rows, 310B] [1 rows/s, 89B/s]
 
-trino:demo> select * from icymta limit 20;
-Query 20251209_011643_00006_q7bzc failed: Failed to load table: icymta in demo namespace
 
 trino:demo> select * from planes limit 20;
  seen_pos |  flight  |    adsbnow     | latitude  | nic | emergency |                 uuid                 | seen | geomrate | navheading |          navigationmodes    >
@@ -139,6 +137,35 @@ Per Node: 0.0 parallelism,     3 rows/s, 4.33KiB/s
 Parallelism: 0.0
 Peak Memory: 20.5KiB
 9.22 [34 rows, 39.9KiB] [3 rows/s, 4.33KiB/s]
+
+trino:demo> select * from stockvalues limit 20;
+                 uuid                 | lastprice | stockvolume | symbol |      ts       | tradeconditions 
+--------------------------------------+-----------+-------------+--------+---------------+-----------------
+ 3ba6ab06-77d6-4999-b323-c09be8e0af0b |    131.98 |       200.0 | ABT    | 1743177174651 | [1, 8]          
+ e8ec2443-871e-4db8-8d51-3a76c9701fa8 |  167.7777 |        51.0 | AVGO   | 1743177174651 | [1, 32, 12]     
+ 11d7dc98-6f4b-478d-9939-0f769fa0232a |   109.735 |        30.0 | NVDA   | 1743177174649 | [1, 12]         
+ ac18430b-05d5-4435-9d49-ab20c938495f |    109.73 |        13.0 | NVDA   | 1743177173954 | [12]            
+ 507256db-a2b9-44da-9337-ba2ff710e079 |    59.017 |       100.0 | BMY    | 1743177174426 | [1, 32, 3]      
+ c51c88c2-2d50-4497-ac31-228e6b28cb53 |    156.39 |        10.0 | GOOGL  | 1743177173766 | [1, 12]         
+ 6b79f494-4440-418b-aefd-fa15c0b7792b |    219.37 |         5.0 | AAPL   | 1743177173702 | [1, 12]         
+ b89186ac-8c50-4aff-b370-dcd9ba614712 |    194.11 |       100.0 | AMZN   | 1743177173399 | [1, 8]          
+ e8465484-7608-4011-8469-832b02972630 |    109.74 |         1.0 | NVDA   | 1743177172814 | [12]            
+ 861c251d-84a9-44e0-bd91-639b0570255c |    219.37 |        20.0 | AAPL   | 1743177172519 | [1, 12]         
+ 5acb51b1-cd70-410b-bb6a-037829b87c4b |  132.0071 |         1.0 | ABT    | 1743177173645 | [1, 12]         
+ f90bc311-05e5-4082-ba5b-0fb60d01a2e2 |    156.39 |       100.0 | GOOGL  | 1743177173440 | [1]             
+ 09359840-6ce1-4c3f-8847-81b222ffff6e |    194.09 |         2.0 | AMZN   | 1743177172598 | [1, 12]         
+ 8044bfe1-0680-4ab5-93cf-18ce2cfe1a3f |    265.73 |        10.0 | TMUS   | 1743177172240 | [1, 8, 12]      
+ d91e7f9c-eb9f-44fd-8dba-3da46c80a4c7 |   85.3401 |         5.0 | WMT    | 1743177171186 | [1, 12]         
+ 5d46ae2d-1235-416e-a762-9933f0a55f06 |    109.73 |        13.0 | NVDA   | 1743177174446 | [1, 12]         
+ e7fa6677-efc1-4ed7-ae44-2350b1bbcb2f |  156.3882 |         1.0 | GOOGL  | 1743177173847 | [1, 12]         
+ a2b647a6-746d-4fb8-ba4f-74860102d880 |   70.4515 |         4.0 | C      | 1743177173262 | [1, 12]         
+ 39ac9529-902b-4dfe-a421-0f277090b60e |  935.2912 |         1.0 | COST   | 1743177174058 | [1, 12]         
+ 02b03880-7c1c-429d-8df7-8895ccd4715d |  150.8258 |        20.0 | PEP    | 1743177173797 | [1, 32, 12]     
+(20 rows)
+
+Query 20251209_012209_00010_q7bzc, FINISHED, 1 node
+Splits: 10 total, 10 done (100.00%)
+8.14 [31 rows, 13MiB] [3 rows/s, 1.59MiB/s]
 
 
 ````
