@@ -1,10 +1,15 @@
 # trinotosnowflakeicebergrestinterface
+
 Trino - Snowflake - Apache Iceberg - Horizon - Iceberg REST API (IRC) - Polaris API
 
 
-Follow this
-https://jasonhhughes.medium.com/trino-reading-apache-iceberg-tables-via-snowflakes-horizon-iceberg-rest-catalog-apis-a43bb8326466
+Follow this:
 
+* https://jasonhhughes.medium.com/trino-reading-apache-iceberg-tables-via-snowflakes-horizon-iceberg-rest-catalog-apis-a43bb8326466
+
+* https://docs.snowflake.com/user-guide/tables-iceberg-query-using-external-query-engine-snowflake-horizon
+
+  
 
 From Snowflake
 
@@ -166,6 +171,71 @@ trino:demo> select * from stockvalues limit 20;
 Query 20251209_012209_00010_q7bzc, FINISHED, 1 node
 Splits: 10 total, 10 done (100.00%)
 8.14 [31 rows, 13MiB] [3 rows/s, 1.59MiB/s]
+
+trino:demo> select PM10, HIGHNOISE, AMPLITUDE100, TEMPERATURE, ADJTEMPF, PRESSURE, HUMIDITY, LUX, PROXIMITY, PM25, NH3, GASKO, OXIDISING, PMPER1L03, CPU, CPU_TEMP FROM SENSORS ORDER BY SYSTEMTIME DESC LIMIT 20;
+ PM10 | HIGHNOISE | AMPLITUDE100 | TEMPERATURE | ADJTEMPF | PRESSURE | HUMIDITY | LUX | PROXIMITY | PM25 |  NH3  |           GASKO            | OXIDISING | PMPER1L03 | >
+------+-----------+--------------+-------------+----------+----------+----------+-----+-----------+------+-------+----------------------------+-----------+-----------+->
+    7 |       0.4 |          1.0 | 20.5        | 23.2     |    986.2 |     23.2 | 0.0 |       110 |    7 | 207.2 | Oxidising: 937548.39 Ohms +|     937.5 |         0 | >
+      |           |              |             |          |          |          |     |           |      |       | Reducing: 4344000.00 Ohms +|           |           | >
+      |           |              |             |          |          |          |     |           |      |       | NH3: 207247.86 Ohms        |           |           | >
+    5 |       0.2 |          1.0 | 20.5        | 23.7     |    986.2 |     23.3 | 0.0 |       108 |    5 | 174.7 | Oxidising: 1151843.14 Ohms+|    1151.8 |         0 | >
+      |           |              |             |          |          |          |     |           |      |       | Reducing: 2313230.77 Ohms +|           |           | >
+      |           |              |             |          |          |          |     |           |      |       | NH3: 174711.61 Ohms        |           |           | >
+    5 |       0.2 |          1.2 | 20.5        | 24.4     |    986.2 |     23.4 | 0.0 |       111 |    5 | 183.7 | Oxidising: 2877333.33 Ohms+|    2877.3 |         0 | >
+      |           |              |             |          |          |          |     |           |      |       | Reducing: 7644000.00 Ohms +|           |           | >
+      |           |              |             |          |          |          |     |           |      |       | NH3: 183688.72 Ohms        |           |           | >
+    0 |       0.2 |          1.1 | 20.5        | 16.1     |   1020.2 |     12.8 | 0.0 |       114 |    0 | 298.0 | Oxidising: 579051.55 Ohms +|     579.1 |         0 | >
+      |           |              |             |          |          |          |     |           |      |       | Reducing: 5544000.00 Ohms +|           |           | >
+      |           |              |             |          |          |          |     |           |      |       | NH3: 298022.99 Ohms        |           |           | >
+    0 |       0.1 |          1.1 | 20.5        | 16.0     |   1020.2 |     13.0 | 0.0 |       111 |    0 | 290.1 | Oxidising: 572571.43 Ohms +|     572.6 |         0 | >
+      |           |              |             |          |          |          |     |           |      |       | Reducing: 5544000.00 Ohms +|           |           | >
+      |           |              |             |          |          |          |     |           |      |       | NH3: 290067.42 Ohms        |           |           | >
+    0 |       0.3 |          1.1 | 20.5        | 16.3     |   1020.2 |     13.0 | 0.0 |       108 |    0 | 286.2 | Oxidising: 585666.67 Ohms +|     585.7 |         0 | >
+      |           |              |             |          |          |          |     |           |      |       | Reducing: 6104000.00 Ohms +|           |           | >
+      |           |              |             |          |          |          |     |           |      |       | NH3: 286222.22 Ohms        |           |           | >
+    0 |       0.2 |          1.0 | 20.5        | 16.9     |   1020.2 |     13.6 | 0.0 |       113 |    0 | 284.3 | Oxidising: 560000.00 Ohms +|     560.0 |         0 | >
+      |           |              |             |          |          |          |     |           |      |       | Reducing: 6104000.00 Ohms +|           |           | >
+      |           |              |             |          |          |          |     |           |      |       | NH3: 284331.49 Ohms        |           |           | >
+    1 |       0.1 |          1.1 | 20.5        | 16.0     |   1020.2 |     13.7 | 0.0 |       111 |    1 | 277.0 | Oxidising: 553900.99 Ohms +|     553.9 |         0 | >
+      |           |              |             |          |          |          |     |           |      |       | Reducing: 6104000.00 Ohms +|           |           | >
+      |           |              |             |          |          |          |     |           |      |       | NH3: 276972.97 Ohms        |           |           | >
+    0 |       0.1 |          1.2 | 20.5        | 16.3     |   1020.2 |     13.7 | 0.0 |       114 |    0 | 269.9 | Oxidising: 542058.25 Ohms +|     542.1 |         0 | >
+      |           |              |             |          |          |          |     |           |      |       | Reducing: 6104000.00 Ohms +|           |           | >
+      |           |              |             |          |          |          |     |           |      |       | NH3: 269925.93 Ohms        |           |           | >
+    0 |       0.2 |          1.0 | 20.5        | 16.0     |   1020.2 |     14.0 | 0.0 |       112 |    0 | 261.5 | Oxidising: 536307.69 Ohms +|     536.3 |         0 | >
+      |           |              |             |          |          |          |     |           |      |       | Reducing: 5544000.00 Ohms +|           |           | >
+      |           |              |             |          |          |          |     |           |      |       | NH3: 261525.77 Ohms        |           |           | >
+    1 |       0.4 |          1.1 | 20.5        | 16.1     |   1020.2 |     14.0 | 0.0 |       113 |    1 | 250.5 | Oxidising: 519700.93 Ohms +|     519.7 |         0 | >
+      |           |              |             |          |          |          |     |           |      |       | Reducing: 5544000.00 Ohms +|           |           | >
+      |           |              |             |          |          |          |     |           |      |       | NH3: 250467.66 Ohms        |           |           | >
+    0 |       0.3 |          1.1 | 20.5        | 16.0     |   1020.2 |     13.8 | 0.0 |       113 |    0 | 243.0 | Oxidising: 514370.37 Ohms +|     514.4 |         0 | >
+      |           |              |             |          |          |          |     |           |      |       | Reducing: 5544000.00 Ohms +|           |           | >
+      |           |              |             |          |          |          |     |           |      |       | NH3: 243029.13 Ohms        |           |           | >
+    0 |       0.1 |          1.1 | 20.5        | 16.7     |   1020.2 |     14.2 | 0.0 |       111 |    0 | 240.2 | Oxidising: 509137.61 Ohms +|     509.1 |         0 | >
+      |           |              |             |          |          |          |     |           |      |       | Reducing: 5544000.00 Ohms +|           |           | >
+      |           |              |             |          |          |          |     |           |      |       | NH3: 240153.85 Ohms        |           |           | >
+    0 |       0.2 |          1.2 | 20.5        | 16.3     |   1020.2 |     13.9 | 0.0 |       111 |    0 | 233.2 | Oxidising: 498954.95 Ohms +|     499.0 |         0 | >
+      |           |              |             |          |          |          |     |           |      |       | Reducing: 5544000.00 Ohms +|           |           | >
+      |           |              |             |          |          |          |     |           |      |       | NH3: 233201.88 Ohms        |           |           | >
+    0 |       0.2 |          1.0 | 20.5        | 16.1     |   1020.2 |     14.2 | 0.0 |       112 |    0 | 225.3 | Oxidising: 489132.74 Ohms +|     489.1 |         0 | >
+      |           |              |             |          |          |          |     |           |      |       | Reducing: 5544000.00 Ohms +|           |           | >
+      |           |              |             |          |          |          |     |           |      |       | NH3: 225278.54 Ohms        |           |           | >
+    0 |       0.0 |          1.1 | 20.5        | 16.0     |   1020.2 |     14.3 | 0.0 |       113 |    0 | 221.5 | Oxidising: 484350.88 Ohms +|     484.4 |         0 | >
+      |           |              |             |          |          |          |     |           |      |       | Reducing: 5544000.00 Ohms +|           |           | >
+      |           |              |             |          |          |          |     |           |      |       | NH3: 221477.48 Ohms        |           |           | >
+    0 |       0.2 |          1.1 | 20.5        | 16.7     |   1020.3 |     14.4 | 0.0 |       108 |    0 | 215.4 | Oxidising: 475034.48 Ohms +|     475.0 |         0 | >
+      |           |              |             |          |          |          |     |           |      |       | Reducing: 5544000.00 Ohms +|           |           | >
+      |           |              |             |          |          |          |     |           |      |       | NH3: 215365.64 Ohms        |           |           | >
+    0 |       0.1 |          1.0 | 20.5        | 16.5     |   1020.3 |     14.6 | 0.0 |       112 |    0 | 202.8 | Oxidising: 466033.90 Ohms +|     466.0 |         0 | >
+      |           |              |             |          |          |          |     |           |      |       | Reducing: 5544000.00 Ohms +|           |           | >
+      |           |              |             |          |          |          |     |           |      |       | NH3: 202823.53 Ohms        |           |           | >
+    1 |       0.4 |          1.1 | 20.5        | 16.5     |   1020.3 |     14.8 | 0.0 |       112 |    1 | 193.4 | Oxidising: 453090.91 Ohms +|     453.1 |         0 | >
+      |           |              |             |          |          |          |     |           |      |       | Reducing: 5077333.33 Ohms +|           |           | >
+      |           |              |             |          |          |          |     |           |      |       | NH3: 193392.71 Ohms        |           |           | >
+    1 |       0.6 |          1.1 | 20.5        | 16.5     |   1020.3 |     14.7 | 0.0 |       111 |    1 | 185.6 | Oxidising: 444813.01 Ohms +|     444.8 |         0 | >
+      |           |              |             |          |          |          |     |           |      |       | Reducing: 5077333.33 Ohms +|           |           | >
+      |           |              |             |          |          |          |     |           |      |       | NH3: 185568.63 Ohms        |           |           | >
+(20 rows)
 
 
 ````
