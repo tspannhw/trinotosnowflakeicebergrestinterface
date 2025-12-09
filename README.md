@@ -75,8 +75,8 @@ Note:  use lowercase for name, don't use underscores (_)
 
 Note:   rest-catalog warehouse is database name with Permissions for the TRINO_ROLE
 
-`````
 
+`````
 
 CREATE CATALOG horizonsnow USING iceberg
 WITH (
@@ -242,6 +242,7 @@ trino:demo> select PM10, HIGHNOISE, AMPLITUDE100, TEMPERATURE, ADJTEMPF, PRESSUR
 
 ````
 
+
 <img width="2532" height="1304" alt="image" src="https://github.com/user-attachments/assets/40b3bb95-2ef4-4d46-9747-b25905c5c0a8" />
 
 <img width="2533" height="788" alt="image" src="https://github.com/user-attachments/assets/b09328a8-f443-44b9-bb5d-26cce81f4625" />
@@ -260,4 +261,5 @@ Make sure you have network and login permissions.
 <img width="2145" height="1209" alt="image" src="https://github.com/user-attachments/assets/a496bc18-251e-4798-8867-5131d361eac2" />
 
 
+<img width="2577" height="1826" alt="image" src="https://github.com/user-attachments/assets/461b1e42-ea40-4e8d-ade0-190bcb50b302" />
 
