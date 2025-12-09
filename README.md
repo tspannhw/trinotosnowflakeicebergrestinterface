@@ -2,6 +2,8 @@
 
 Trino - Snowflake - Apache Iceberg - Horizon - Iceberg REST API (IRC) - Polaris API
 
+<img width="512" height="286" alt="image" src="https://github.com/user-attachments/assets/2e9d1c15-6ef3-4442-a5cf-57d8d173e9cc" />
+
 
 <img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/5289f047-0e34-45d9-8f94-029b932679c5" />
 
