@@ -244,6 +244,9 @@ trino:demo> select PM10, HIGHNOISE, AMPLITUDE100, TEMPERATURE, ADJTEMPF, PRESSUR
 
 <img width="2532" height="1304" alt="image" src="https://github.com/user-attachments/assets/40b3bb95-2ef4-4d46-9747-b25905c5c0a8" />
 
+<img width="2533" height="788" alt="image" src="https://github.com/user-attachments/assets/b09328a8-f443-44b9-bb5d-26cce81f4625" />
+
+
 
 
 ## Validation
